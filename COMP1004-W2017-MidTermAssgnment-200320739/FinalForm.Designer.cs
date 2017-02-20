@@ -69,6 +69,7 @@
             this.STRTextBox = new System.Windows.Forms.TextBox();
             this.FinalFormFontDialog = new System.Windows.Forms.FontDialog();
             this.CharacterPictureBox = new System.Windows.Forms.PictureBox();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.CharacterInformationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -589,17 +590,29 @@
             // 
             // CharacterPictureBox
             // 
-            this.CharacterPictureBox.Location = new System.Drawing.Point(324, 215);
+            this.CharacterPictureBox.Location = new System.Drawing.Point(318, 189);
             this.CharacterPictureBox.Name = "CharacterPictureBox";
             this.CharacterPictureBox.Size = new System.Drawing.Size(288, 261);
             this.CharacterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.CharacterPictureBox.TabIndex = 2;
             this.CharacterPictureBox.TabStop = false;
             // 
+            // ExitButton
+            // 
+            this.ExitButton.Location = new System.Drawing.Point(506, 467);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(100, 28);
+            this.ExitButton.TabIndex = 16;
+            this.ExitButton.Text = "Exit";
+            this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ClickExitToolStripMenuItem);
+            // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(641, 508);
+            this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.CharacterPictureBox);
             this.Controls.Add(this.AbilitiesGroupBox);
             this.Controls.Add(this.CharacterInformationGroupBox);
@@ -669,5 +682,6 @@
         private System.Windows.Forms.TextBox AgeTextBox;
         private System.Windows.Forms.FontDialog FinalFormFontDialog;
         private System.Windows.Forms.TextBox WeightTextBox;
+        internal System.Windows.Forms.Button ExitButton;
     }
 }

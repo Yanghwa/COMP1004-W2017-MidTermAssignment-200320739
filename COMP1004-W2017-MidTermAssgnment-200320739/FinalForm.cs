@@ -37,7 +37,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
         /// <param name="e"></param>
         private void ClickExitToolStripMenuItem(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
        
         /// <summary>

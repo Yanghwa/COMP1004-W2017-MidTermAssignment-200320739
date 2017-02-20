@@ -220,7 +220,6 @@
             this.Name = "AbilityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roll Your Abilities";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClosingAbilityForm);
             this.ResumeLayout(false);
             this.PerformLayout();
 

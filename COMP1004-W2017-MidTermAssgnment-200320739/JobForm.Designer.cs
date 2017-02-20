@@ -148,7 +148,6 @@
             this.Name = "JobForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select the Character\'s Job";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormClosingJobForm);
             this.JobSelectGroupBox.ResumeLayout(false);
             this.JobSelectGroupBox.PerformLayout();
             this.ResumeLayout(false);

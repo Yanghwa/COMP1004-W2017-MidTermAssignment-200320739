@@ -120,24 +120,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                 }
             }
         }
-        /// <summary>
-        /// this method shows the warning message when users want to close the form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FormClosingRaceForm(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.OK)
-            {
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
+       
         /// <summary>
         /// this method is getter and setter for _abilityInteger
         /// </summary>

@@ -92,28 +92,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             this.Hide();
             race.Show();
         }
-        /// <summary>
-        /// this method shows the warning message when users click x button to close
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ClosingAbilityForm(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-
-            if (result == DialogResult.OK)
-            {
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
-        //functions-----------------------------
-        /// <summary>
-        /// this method adds each ability textbox object to textbox array, to make possible to shows the abilities data in the textbox as string
-        /// </summary>
+        
         private void InitializeAbilities()
         {
             this._abilities.Add(STRTextBox);
