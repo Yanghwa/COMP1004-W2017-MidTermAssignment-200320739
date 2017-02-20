@@ -15,10 +15,14 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
     {
         // Random Number object
         Random random = new Random();
+        private List<TextBox> _abilities;
 
         public AbilityForm()
         {
             InitializeComponent();
+
+            this._abilities = new List<TextBox>();
+            this._initializeAbilities();
         }
 
         /// <summary>
@@ -36,11 +40,34 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             }
             return result;
         }
-
+        private void _initializeAbilities()
+        {
+            this._abilities.Add(STRTextBox);
+            this._abilities.Add(DEXTextBox);
+            this._abilities.Add(ENDTextBox);
+            this._abilities.Add(INTTextBox);
+            this._abilities.Add(PERTextBox);
+            this._abilities.Add(CHATextBox);
+        }
         private void RollButton_Click(object sender, EventArgs e)
         {
             Debug.WriteLine(Roll3D10().ToString());
+            for (int ability = 0; ability < this._abilities.Count; ability++)
+            {
+                // roll 5d10 and assign the value to a temp variable
+                int currentRoll = this.Roll3D10();
+
+                // assign the current roll to the current ability
+                this._abilities[ability].Text = currentRoll.ToString();
+            }
         }
 
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+
+            RaceForm race = new RaceForm();
+            this.Hide();
+            race.Show();
+        }
     }
 }

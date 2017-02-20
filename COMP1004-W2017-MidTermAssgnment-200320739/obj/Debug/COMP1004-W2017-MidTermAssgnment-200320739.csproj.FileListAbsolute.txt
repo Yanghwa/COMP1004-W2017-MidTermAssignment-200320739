@@ -1,1 +1,12 @@
 C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\bin\Debug\COMP1004-W2017-MidTermAssgnment-StudentID.exe.config
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\bin\Debug\COMP1004-W2017-MidTermAssgnment-StudentID.exe
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\bin\Debug\COMP1004-W2017-MidTermAssgnment-StudentID.pdb
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004-W2017-MidTermAssgnment-200320739.csprojResolveAssemblyReference.cache
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004_W2017_MidTermAssgnment_200320739.AbilityForm.resources
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004_W2017_MidTermAssgnment_200320739.FinalForm.resources
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004_W2017_MidTermAssgnment_200320739.JobForm.resources
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004_W2017_MidTermAssgnment_200320739.Properties.Resources.resources
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004_W2017_MidTermAssgnment_200320739.RaceForm.resources
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004-W2017-MidTermAssgnment-200320739.csproj.GenerateResource.Cache
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004-W2017-MidTermAssgnment-StudentID.exe
+C:\Users\Junghwan Yang\Desktop\MidTerm\COMP1004-W2017-MidTermAssgnment-200320739\COMP1004-W2017-MidTermAssgnment-200320739\obj\Debug\COMP1004-W2017-MidTermAssgnment-StudentID.pdb
