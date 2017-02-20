@@ -49,7 +49,17 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
         {
             if (FinalFormFontDialog.ShowDialog() == DialogResult.OK)
             {
-                NameLabel.Font = NameTextBox.Font = WeightLabel.Font = WeightTextBox.Font = AgeLabel.Font = AgeTextBox.Font = HealthPointsLabel.Font = HealthPointsTextBox.Font = HeightLabel.Font = HeightTextBox.Font = JobLabel.Font = JobTextBox.Font = RaceLabel.Font = RaceTextBox.Font = STRLabel.Font = STRTextBox.Font = DEXLabel.Font = DEXTextBox.Font = ENDLabel.Font = ENDTextBox.Font = INTLabel.Font = INTTextBox.Font = PERLabel.Font = PERTextBox.Font = CHALabel.Font = CHATextBox.Font = FinalFormFontDialog.Font;
+                TitleLabel.Font = TitleTextBox.Font = NameLabel.Font 
+                    = NameTextBox.Font = WeightLabel.Font 
+                    = WeightTextBox.Font = AgeLabel.Font = AgeTextBox.Font 
+                    = HealthPointsLabel.Font = HealthPointsTextBox.Font 
+                    = HeightLabel.Font = HeightTextBox.Font = JobLabel.Font 
+                    = JobTextBox.Font = RaceLabel.Font = RaceTextBox.Font 
+                    = STRLabel.Font = STRTextBox.Font = DEXLabel.Font 
+                    = DEXTextBox.Font = ENDLabel.Font = ENDTextBox.Font 
+                    = INTLabel.Font = INTTextBox.Font = PERLabel.Font 
+                    = PERTextBox.Font = CHALabel.Font = CHATextBox.Font 
+                    = FinalFormFontDialog.Font;
             }
         }
         /// <summary>
@@ -70,9 +80,10 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
         /// <param name="e"></param>
         private void ClickPrintToolStripMenuItem(object sender, EventArgs e)
         {
-            if(CheckEmptyValue(NameTextBox.Text) && CheckEmptyValue(AgeTextBox.Text) && CheckEmptyValue(HeightTextBox.Text) && CheckEmptyValue(WeightTextBox.Text))
+            if(CheckEmptyValue(TitleTextBox.Text) && CheckEmptyValue(NameTextBox.Text) && CheckEmptyValue(AgeTextBox.Text) && CheckEmptyValue(HeightTextBox.Text) && CheckEmptyValue(WeightTextBox.Text))
             {
-                MessageBox.Show("Name: " + NameTextBox.Text + "\nAge: "
+                MessageBox.Show("Title: " + TitleTextBox.Text +
+                    "\nName: " + NameTextBox.Text + "\nAge: "
                 + AgeTextBox.Text + "\nHeight: " + HeightTextBox.Text
                 + "\nWeight: " + WeightTextBox.Text + "\nJob: "
                 + JobTextBox.Text + "\nRace: " + RaceTextBox.Text

@@ -70,6 +70,8 @@
             this.FinalFormFontDialog = new System.Windows.Forms.FontDialog();
             this.CharacterPictureBox = new System.Windows.Forms.PictureBox();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.TitleTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.CharacterInformationGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -156,11 +158,10 @@
             // CharacterInformationGroupBox
             // 
             this.CharacterInformationGroupBox.Controls.Add(this.tableLayoutPanel2);
-            this.CharacterInformationGroupBox.Controls.Add(this.tableLayoutPanel1);
             this.CharacterInformationGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.CharacterInformationGroupBox.Location = new System.Drawing.Point(6, 36);
+            this.CharacterInformationGroupBox.Location = new System.Drawing.Point(6, 28);
             this.CharacterInformationGroupBox.Name = "CharacterInformationGroupBox";
-            this.CharacterInformationGroupBox.Size = new System.Drawing.Size(623, 137);
+            this.CharacterInformationGroupBox.Size = new System.Drawing.Size(623, 159);
             this.CharacterInformationGroupBox.TabIndex = 1;
             this.CharacterInformationGroupBox.TabStop = false;
             this.CharacterInformationGroupBox.Text = "Character Information";
@@ -168,21 +169,21 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.97872F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.02128F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel2.Controls.Add(this.JobLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.RaceLabel, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.HealthPointsTextBox, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.HealthPointsLabel, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.JobTextBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.RaceTextBox, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(382, 34);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(377, 29);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(235, 97);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(246, 97);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // JobLabel
@@ -215,7 +216,7 @@
             // 
             this.HealthPointsTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HealthPointsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthPointsTextBox.Location = new System.Drawing.Point(151, 64);
+            this.HealthPointsTextBox.Location = new System.Drawing.Point(156, 64);
             this.HealthPointsTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HealthPointsTextBox.Name = "HealthPointsTextBox";
             this.HealthPointsTextBox.ReadOnly = true;
@@ -228,19 +229,20 @@
             this.HealthPointsLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HealthPointsLabel.AutoSize = true;
             this.HealthPointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthPointsLabel.Location = new System.Drawing.Point(32, 64);
+            this.HealthPointsLabel.Location = new System.Drawing.Point(30, 64);
             this.HealthPointsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HealthPointsLabel.Name = "HealthPointsLabel";
-            this.HealthPointsLabel.Size = new System.Drawing.Size(82, 33);
+            this.HealthPointsLabel.Size = new System.Drawing.Size(86, 33);
             this.HealthPointsLabel.TabIndex = 22;
-            this.HealthPointsLabel.Text = "Health Ponts:";
+            this.HealthPointsLabel.Text = "Health Points:";
             this.HealthPointsLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HealthPointsLabel.UseMnemonic = false;
             // 
             // JobTextBox
             // 
             this.JobTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.JobTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JobTextBox.Location = new System.Drawing.Point(151, 0);
+            this.JobTextBox.Location = new System.Drawing.Point(156, 0);
             this.JobTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.JobTextBox.Name = "JobTextBox";
             this.JobTextBox.ReadOnly = true;
@@ -252,7 +254,7 @@
             // 
             this.RaceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RaceTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RaceTextBox.Location = new System.Drawing.Point(151, 32);
+            this.RaceTextBox.Location = new System.Drawing.Point(156, 32);
             this.RaceTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.RaceTextBox.Name = "RaceTextBox";
             this.RaceTextBox.ReadOnly = true;
@@ -267,6 +269,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.01235F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.38272F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.40741F));
+            this.tableLayoutPanel1.Controls.Add(this.TitleLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.TitleTextBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.NameLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.AgeLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.HeightTextBox, 3, 0);
@@ -275,12 +279,13 @@
             this.tableLayoutPanel1.Controls.Add(this.NameTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.AgeTextBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.WeightTextBox, 3, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-6, 34);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 55);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 97);
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.79245F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.20755F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(382, 127);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // NameLabel
@@ -288,7 +293,7 @@
             this.NameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameLabel.Location = new System.Drawing.Point(4, 9);
+            this.NameLabel.Location = new System.Drawing.Point(4, 0);
             this.NameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(84, 29);
@@ -301,7 +306,7 @@
             this.AgeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AgeLabel.AutoSize = true;
             this.AgeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeLabel.Location = new System.Drawing.Point(15, 58);
+            this.AgeLabel.Location = new System.Drawing.Point(15, 41);
             this.AgeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AgeLabel.Name = "AgeLabel";
             this.AgeLabel.Size = new System.Drawing.Size(62, 29);
@@ -313,7 +318,7 @@
             // 
             this.HeightTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HeightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeightTextBox.Location = new System.Drawing.Point(294, 6);
+            this.HeightTextBox.Location = new System.Drawing.Point(294, 0);
             this.HeightTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HeightTextBox.MaxLength = 10;
             this.HeightTextBox.Name = "HeightTextBox";
@@ -327,7 +332,7 @@
             this.HeightLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.HeightLabel.AutoSize = true;
             this.HeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HeightLabel.Location = new System.Drawing.Point(176, 9);
+            this.HeightLabel.Location = new System.Drawing.Point(176, 0);
             this.HeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(89, 29);
@@ -340,7 +345,7 @@
             this.WeightLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WeightLabel.AutoSize = true;
             this.WeightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeightLabel.Location = new System.Drawing.Point(173, 58);
+            this.WeightLabel.Location = new System.Drawing.Point(173, 41);
             this.WeightLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WeightLabel.Name = "WeightLabel";
             this.WeightLabel.Size = new System.Drawing.Size(94, 29);
@@ -352,7 +357,7 @@
             // 
             this.NameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NameTextBox.Location = new System.Drawing.Point(97, 6);
+            this.NameTextBox.Location = new System.Drawing.Point(97, 0);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameTextBox.MaxLength = 50;
             this.NameTextBox.Name = "NameTextBox";
@@ -364,7 +369,7 @@
             // 
             this.AgeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeTextBox.Location = new System.Drawing.Point(97, 55);
+            this.AgeTextBox.Location = new System.Drawing.Point(97, 38);
             this.AgeTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AgeTextBox.MaxLength = 3;
             this.AgeTextBox.Name = "AgeTextBox";
@@ -377,7 +382,7 @@
             // 
             this.WeightTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WeightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeightTextBox.Location = new System.Drawing.Point(294, 55);
+            this.WeightTextBox.Location = new System.Drawing.Point(294, 38);
             this.WeightTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.WeightTextBox.MaxLength = 10;
             this.WeightTextBox.Name = "WeightTextBox";
@@ -590,7 +595,7 @@
             // 
             // CharacterPictureBox
             // 
-            this.CharacterPictureBox.Location = new System.Drawing.Point(318, 189);
+            this.CharacterPictureBox.Location = new System.Drawing.Point(318, 200);
             this.CharacterPictureBox.Name = "CharacterPictureBox";
             this.CharacterPictureBox.Size = new System.Drawing.Size(288, 261);
             this.CharacterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -599,7 +604,7 @@
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(506, 467);
+            this.ExitButton.Location = new System.Drawing.Point(506, 472);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(100, 28);
@@ -608,11 +613,37 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ClickExitToolStripMenuItem);
             // 
+            // TitleLabel
+            // 
+            this.TitleLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(10, 90);
+            this.TitleLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(73, 29);
+            this.TitleLabel.TabIndex = 24;
+            this.TitleLabel.Text = "Title: ";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            // 
+            // TitleTextBox
+            // 
+            this.TitleTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TitleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleTextBox.Location = new System.Drawing.Point(97, 87);
+            this.TitleTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TitleTextBox.MaxLength = 50;
+            this.TitleTextBox.Name = "TitleTextBox";
+            this.TitleTextBox.Size = new System.Drawing.Size(64, 35);
+            this.TitleTextBox.TabIndex = 25;
+            this.TitleTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FinalForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(641, 508);
             this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.CharacterPictureBox);
             this.Controls.Add(this.AbilitiesGroupBox);
             this.Controls.Add(this.CharacterInformationGroupBox);
@@ -683,5 +714,7 @@
         private System.Windows.Forms.FontDialog FinalFormFontDialog;
         private System.Windows.Forms.TextBox WeightTextBox;
         internal System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.TextBox TitleTextBox;
     }
 }
