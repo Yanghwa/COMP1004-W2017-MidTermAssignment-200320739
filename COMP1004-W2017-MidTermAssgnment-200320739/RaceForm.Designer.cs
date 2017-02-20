@@ -37,6 +37,12 @@
             this.ElfRadioButton = new System.Windows.Forms.RadioButton();
             this.DwarfRadioButton = new System.Windows.Forms.RadioButton();
             this.HumanRadioButton = new System.Windows.Forms.RadioButton();
+            this.STRTextBox = new System.Windows.Forms.TextBox();
+            this.INTTextBox = new System.Windows.Forms.TextBox();
+            this.DEXTextBox = new System.Windows.Forms.TextBox();
+            this.ENDTextBox = new System.Windows.Forms.TextBox();
+            this.PERTextBox = new System.Windows.Forms.TextBox();
+            this.CHATextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).BeginInit();
             this.RaceSelectGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +66,7 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // RacialBonusLabel
             // 
@@ -73,9 +80,11 @@
             // 
             // RacialBonusTextBox
             // 
+            this.RacialBonusTextBox.BackColor = System.Drawing.Color.White;
             this.RacialBonusTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RacialBonusTextBox.Location = new System.Drawing.Point(242, 400);
             this.RacialBonusTextBox.Name = "RacialBonusTextBox";
+            this.RacialBonusTextBox.ReadOnly = true;
             this.RacialBonusTextBox.Size = new System.Drawing.Size(287, 39);
             this.RacialBonusTextBox.TabIndex = 7;
             // 
@@ -144,10 +153,58 @@
             this.HumanRadioButton.UseVisualStyleBackColor = true;
             this.HumanRadioButton.CheckedChanged += new System.EventHandler(this.RaceRadioButton_CheckedChanged);
             // 
+            // STRTextBox
+            // 
+            this.STRTextBox.Location = new System.Drawing.Point(37, 241);
+            this.STRTextBox.Name = "STRTextBox";
+            this.STRTextBox.Size = new System.Drawing.Size(100, 26);
+            this.STRTextBox.TabIndex = 9;
+            // 
+            // INTTextBox
+            // 
+            this.INTTextBox.Location = new System.Drawing.Point(37, 377);
+            this.INTTextBox.Name = "INTTextBox";
+            this.INTTextBox.Size = new System.Drawing.Size(100, 26);
+            this.INTTextBox.TabIndex = 10;
+            // 
+            // DEXTextBox
+            // 
+            this.DEXTextBox.Location = new System.Drawing.Point(37, 287);
+            this.DEXTextBox.Name = "DEXTextBox";
+            this.DEXTextBox.Size = new System.Drawing.Size(100, 26);
+            this.DEXTextBox.TabIndex = 10;
+            // 
+            // ENDTextBox
+            // 
+            this.ENDTextBox.Location = new System.Drawing.Point(37, 333);
+            this.ENDTextBox.Name = "ENDTextBox";
+            this.ENDTextBox.Size = new System.Drawing.Size(100, 26);
+            this.ENDTextBox.TabIndex = 10;
+            // 
+            // PERTextBox
+            // 
+            this.PERTextBox.Location = new System.Drawing.Point(37, 409);
+            this.PERTextBox.Name = "PERTextBox";
+            this.PERTextBox.Size = new System.Drawing.Size(100, 26);
+            this.PERTextBox.TabIndex = 11;
+            // 
+            // CHATextBox
+            // 
+            this.CHATextBox.Location = new System.Drawing.Point(37, 453);
+            this.CHATextBox.Name = "CHATextBox";
+            this.CHATextBox.Size = new System.Drawing.Size(100, 26);
+            this.CHATextBox.TabIndex = 12;
+            // 
             // RaceForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(641, 508);
+            this.Controls.Add(this.PERTextBox);
+            this.Controls.Add(this.CHATextBox);
+            this.Controls.Add(this.ENDTextBox);
+            this.Controls.Add(this.DEXTextBox);
+            this.Controls.Add(this.INTTextBox);
+            this.Controls.Add(this.STRTextBox);
             this.Controls.Add(this.RaceSelectGroupBox);
             this.Controls.Add(this.RacialBonusTextBox);
             this.Controls.Add(this.RacialBonusLabel);
@@ -157,6 +214,7 @@
             this.Name = "RaceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Character Race";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RaceForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).EndInit();
             this.RaceSelectGroupBox.ResumeLayout(false);
             this.RaceSelectGroupBox.PerformLayout();
@@ -176,5 +234,11 @@
         private System.Windows.Forms.RadioButton ElfRadioButton;
         private System.Windows.Forms.RadioButton DwarfRadioButton;
         private System.Windows.Forms.RadioButton HumanRadioButton;
+        private System.Windows.Forms.TextBox STRTextBox;
+        private System.Windows.Forms.TextBox INTTextBox;
+        private System.Windows.Forms.TextBox DEXTextBox;
+        private System.Windows.Forms.TextBox ENDTextBox;
+        private System.Windows.Forms.TextBox PERTextBox;
+        private System.Windows.Forms.TextBox CHATextBox;
     }
 }

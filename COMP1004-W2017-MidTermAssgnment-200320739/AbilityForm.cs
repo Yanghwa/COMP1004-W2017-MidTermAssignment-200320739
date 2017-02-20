@@ -16,6 +16,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
         // Random Number object
         Random random = new Random();
         private List<TextBox> _abilities;
+        private int[] _abilityInteger = new int[6];
 
         public AbilityForm()
         {
@@ -58,16 +59,38 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                 int currentRoll = this.Roll3D10();
 
                 // assign the current roll to the current ability
+                
+                this._abilityInteger[ability] = currentRoll;
                 this._abilities[ability].Text = currentRoll.ToString();
             }
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-
+            if(_abilities == null )
+            {
+                DialogResult result = MessageBox.Show("You have to roll at least once", "Warning",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; 
+            }
             RaceForm race = new RaceForm();
+            race.abilityInteger = this._abilityInteger;
             this.Hide();
             race.Show();
+        }
+
+        private void AbilityForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.OK)
+            {
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
