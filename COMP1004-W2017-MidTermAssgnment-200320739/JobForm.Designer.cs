@@ -56,6 +56,7 @@
             this.JobSelectGroupBox.Controls.Add(this.MagickerRadioButton);
             this.JobSelectGroupBox.Controls.Add(this.RogueRadioButton);
             this.JobSelectGroupBox.Controls.Add(this.SoldierRadioButton);
+            this.JobSelectGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.JobSelectGroupBox.Location = new System.Drawing.Point(12, 29);
             this.JobSelectGroupBox.Name = "JobSelectGroupBox";
             this.JobSelectGroupBox.Size = new System.Drawing.Size(200, 173);
@@ -68,7 +69,7 @@
             this.CultistRdioButton.AutoSize = true;
             this.CultistRdioButton.Location = new System.Drawing.Point(7, 118);
             this.CultistRdioButton.Name = "CultistRdioButton";
-            this.CultistRdioButton.Size = new System.Drawing.Size(78, 24);
+            this.CultistRdioButton.Size = new System.Drawing.Size(104, 33);
             this.CultistRdioButton.TabIndex = 3;
             this.CultistRdioButton.TabStop = true;
             this.CultistRdioButton.Tag = "Cultist";
@@ -81,7 +82,7 @@
             this.MagickerRadioButton.AutoSize = true;
             this.MagickerRadioButton.Location = new System.Drawing.Point(7, 88);
             this.MagickerRadioButton.Name = "MagickerRadioButton";
-            this.MagickerRadioButton.Size = new System.Drawing.Size(98, 24);
+            this.MagickerRadioButton.Size = new System.Drawing.Size(137, 33);
             this.MagickerRadioButton.TabIndex = 2;
             this.MagickerRadioButton.TabStop = true;
             this.MagickerRadioButton.Tag = "Magicker";
@@ -94,7 +95,7 @@
             this.RogueRadioButton.AutoSize = true;
             this.RogueRadioButton.Location = new System.Drawing.Point(7, 57);
             this.RogueRadioButton.Name = "RogueRadioButton";
-            this.RogueRadioButton.Size = new System.Drawing.Size(82, 24);
+            this.RogueRadioButton.Size = new System.Drawing.Size(110, 33);
             this.RogueRadioButton.TabIndex = 1;
             this.RogueRadioButton.TabStop = true;
             this.RogueRadioButton.Tag = "Rogue";
@@ -107,7 +108,7 @@
             this.SoldierRadioButton.AutoSize = true;
             this.SoldierRadioButton.Location = new System.Drawing.Point(7, 26);
             this.SoldierRadioButton.Name = "SoldierRadioButton";
-            this.SoldierRadioButton.Size = new System.Drawing.Size(83, 24);
+            this.SoldierRadioButton.Size = new System.Drawing.Size(116, 33);
             this.SoldierRadioButton.TabIndex = 0;
             this.SoldierRadioButton.TabStop = true;
             this.SoldierRadioButton.Tag = "Soldier";
@@ -118,17 +119,21 @@
             // HealthPointLabel
             // 
             this.HealthPointLabel.AutoSize = true;
+            this.HealthPointLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.HealthPointLabel.Location = new System.Drawing.Point(259, 39);
             this.HealthPointLabel.Name = "HealthPointLabel";
-            this.HealthPointLabel.Size = new System.Drawing.Size(96, 20);
+            this.HealthPointLabel.Size = new System.Drawing.Size(143, 29);
             this.HealthPointLabel.TabIndex = 5;
             this.HealthPointLabel.Text = "Health Point";
             // 
             // HealthPointTextBox
             // 
-            this.HealthPointTextBox.Location = new System.Drawing.Point(263, 72);
+            this.HealthPointTextBox.BackColor = System.Drawing.Color.White;
+            this.HealthPointTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HealthPointTextBox.Location = new System.Drawing.Point(264, 86);
             this.HealthPointTextBox.Name = "HealthPointTextBox";
-            this.HealthPointTextBox.Size = new System.Drawing.Size(100, 26);
+            this.HealthPointTextBox.ReadOnly = true;
+            this.HealthPointTextBox.Size = new System.Drawing.Size(100, 35);
             this.HealthPointTextBox.TabIndex = 6;
             // 
             // JobForm

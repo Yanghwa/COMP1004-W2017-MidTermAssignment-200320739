@@ -1,4 +1,14 @@
-﻿using System;
+﻿//FileName: AbilityForm.cs
+//FileType: Visual C# Source file
+//Author: Junghwan Yang
+//Student ID: 200320739
+//Created On: 20/02/2017
+//Copy Rights: Junghwan Yang
+//Description: This form creates abilities using random -> 3 to 30
+//            
+
+/////////////////////////////////////////////////////////////////////////
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +27,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
         Random random = new Random();
         private List<TextBox> _abilities;
         private int[] _abilityInteger = new int[6];
-
+        private bool _checkRoll = false;
         public AbilityForm()
         {
             InitializeComponent();
@@ -63,18 +73,19 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                 this._abilityInteger[ability] = currentRoll;
                 this._abilities[ability].Text = currentRoll.ToString();
             }
+            _checkRoll = true;
         }
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if(_abilities == null )
+            if(!_checkRoll)
             {
                 DialogResult result = MessageBox.Show("You have to roll at least once", "Warning",
                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return; 
             }
             RaceForm race = new RaceForm();
-            race.abilityInteger = this._abilityInteger;
+            race.AbilityInteger = this._abilityInteger;
             this.Hide();
             race.Show();
         }

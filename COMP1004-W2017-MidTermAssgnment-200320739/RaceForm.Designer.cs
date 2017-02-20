@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CharacterPictureBox = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.Button();
             this.RacialBonusLabel = new System.Windows.Forms.Label();
             this.RacialBonusTextBox = new System.Windows.Forms.TextBox();
@@ -37,25 +36,10 @@
             this.ElfRadioButton = new System.Windows.Forms.RadioButton();
             this.DwarfRadioButton = new System.Windows.Forms.RadioButton();
             this.HumanRadioButton = new System.Windows.Forms.RadioButton();
-            this.STRTextBox = new System.Windows.Forms.TextBox();
-            this.INTTextBox = new System.Windows.Forms.TextBox();
-            this.DEXTextBox = new System.Windows.Forms.TextBox();
-            this.ENDTextBox = new System.Windows.Forms.TextBox();
-            this.PERTextBox = new System.Windows.Forms.TextBox();
-            this.CHATextBox = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).BeginInit();
+            this.CharacterPictureBox = new System.Windows.Forms.PictureBox();
             this.RaceSelectGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CharacterPictureBox
-            // 
-            this.CharacterPictureBox.Location = new System.Drawing.Point(242, 84);
-            this.CharacterPictureBox.Margin = new System.Windows.Forms.Padding(4);
-            this.CharacterPictureBox.Name = "CharacterPictureBox";
-            this.CharacterPictureBox.Size = new System.Drawing.Size(290, 262);
-            this.CharacterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.CharacterPictureBox.TabIndex = 5;
-            this.CharacterPictureBox.TabStop = false;
             // 
             // NextButton
             // 
@@ -94,6 +78,7 @@
             this.RaceSelectGroupBox.Controls.Add(this.ElfRadioButton);
             this.RaceSelectGroupBox.Controls.Add(this.DwarfRadioButton);
             this.RaceSelectGroupBox.Controls.Add(this.HumanRadioButton);
+            this.RaceSelectGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RaceSelectGroupBox.Location = new System.Drawing.Point(12, 84);
             this.RaceSelectGroupBox.Name = "RaceSelectGroupBox";
             this.RaceSelectGroupBox.Size = new System.Drawing.Size(200, 151);
@@ -106,9 +91,8 @@
             this.HalflingRadioButton.AutoSize = true;
             this.HalflingRadioButton.Location = new System.Drawing.Point(7, 118);
             this.HalflingRadioButton.Name = "HalflingRadioButton";
-            this.HalflingRadioButton.Size = new System.Drawing.Size(87, 24);
+            this.HalflingRadioButton.Size = new System.Drawing.Size(119, 33);
             this.HalflingRadioButton.TabIndex = 3;
-            this.HalflingRadioButton.TabStop = true;
             this.HalflingRadioButton.Tag = "Halfling";
             this.HalflingRadioButton.Text = "Halfling";
             this.HalflingRadioButton.UseVisualStyleBackColor = true;
@@ -119,9 +103,8 @@
             this.ElfRadioButton.AutoSize = true;
             this.ElfRadioButton.Location = new System.Drawing.Point(7, 88);
             this.ElfRadioButton.Name = "ElfRadioButton";
-            this.ElfRadioButton.Size = new System.Drawing.Size(53, 24);
+            this.ElfRadioButton.Size = new System.Drawing.Size(66, 33);
             this.ElfRadioButton.TabIndex = 2;
-            this.ElfRadioButton.TabStop = true;
             this.ElfRadioButton.Tag = "Elf";
             this.ElfRadioButton.Text = "Elf";
             this.ElfRadioButton.UseVisualStyleBackColor = true;
@@ -132,9 +115,8 @@
             this.DwarfRadioButton.AutoSize = true;
             this.DwarfRadioButton.Location = new System.Drawing.Point(7, 57);
             this.DwarfRadioButton.Name = "DwarfRadioButton";
-            this.DwarfRadioButton.Size = new System.Drawing.Size(76, 24);
+            this.DwarfRadioButton.Size = new System.Drawing.Size(100, 33);
             this.DwarfRadioButton.TabIndex = 1;
-            this.DwarfRadioButton.TabStop = true;
             this.DwarfRadioButton.Tag = "Dwarf";
             this.DwarfRadioButton.Text = "Dwarf";
             this.DwarfRadioButton.UseVisualStyleBackColor = true;
@@ -145,66 +127,27 @@
             this.HumanRadioButton.AutoSize = true;
             this.HumanRadioButton.Location = new System.Drawing.Point(7, 26);
             this.HumanRadioButton.Name = "HumanRadioButton";
-            this.HumanRadioButton.Size = new System.Drawing.Size(86, 24);
+            this.HumanRadioButton.Size = new System.Drawing.Size(114, 33);
             this.HumanRadioButton.TabIndex = 0;
-            this.HumanRadioButton.TabStop = true;
             this.HumanRadioButton.Tag = "Human";
             this.HumanRadioButton.Text = "Human";
             this.HumanRadioButton.UseVisualStyleBackColor = true;
             this.HumanRadioButton.CheckedChanged += new System.EventHandler(this.RaceRadioButton_CheckedChanged);
             // 
-            // STRTextBox
+            // CharacterPictureBox
             // 
-            this.STRTextBox.Location = new System.Drawing.Point(37, 241);
-            this.STRTextBox.Name = "STRTextBox";
-            this.STRTextBox.Size = new System.Drawing.Size(100, 26);
-            this.STRTextBox.TabIndex = 9;
-            // 
-            // INTTextBox
-            // 
-            this.INTTextBox.Location = new System.Drawing.Point(37, 377);
-            this.INTTextBox.Name = "INTTextBox";
-            this.INTTextBox.Size = new System.Drawing.Size(100, 26);
-            this.INTTextBox.TabIndex = 10;
-            // 
-            // DEXTextBox
-            // 
-            this.DEXTextBox.Location = new System.Drawing.Point(37, 287);
-            this.DEXTextBox.Name = "DEXTextBox";
-            this.DEXTextBox.Size = new System.Drawing.Size(100, 26);
-            this.DEXTextBox.TabIndex = 10;
-            // 
-            // ENDTextBox
-            // 
-            this.ENDTextBox.Location = new System.Drawing.Point(37, 333);
-            this.ENDTextBox.Name = "ENDTextBox";
-            this.ENDTextBox.Size = new System.Drawing.Size(100, 26);
-            this.ENDTextBox.TabIndex = 10;
-            // 
-            // PERTextBox
-            // 
-            this.PERTextBox.Location = new System.Drawing.Point(37, 409);
-            this.PERTextBox.Name = "PERTextBox";
-            this.PERTextBox.Size = new System.Drawing.Size(100, 26);
-            this.PERTextBox.TabIndex = 11;
-            // 
-            // CHATextBox
-            // 
-            this.CHATextBox.Location = new System.Drawing.Point(37, 453);
-            this.CHATextBox.Name = "CHATextBox";
-            this.CHATextBox.Size = new System.Drawing.Size(100, 26);
-            this.CHATextBox.TabIndex = 12;
+            this.CharacterPictureBox.Location = new System.Drawing.Point(242, 84);
+            this.CharacterPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.CharacterPictureBox.Name = "CharacterPictureBox";
+            this.CharacterPictureBox.Size = new System.Drawing.Size(290, 262);
+            this.CharacterPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.CharacterPictureBox.TabIndex = 5;
+            this.CharacterPictureBox.TabStop = false;
             // 
             // RaceForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(641, 508);
-            this.Controls.Add(this.PERTextBox);
-            this.Controls.Add(this.CHATextBox);
-            this.Controls.Add(this.ENDTextBox);
-            this.Controls.Add(this.DEXTextBox);
-            this.Controls.Add(this.INTTextBox);
-            this.Controls.Add(this.STRTextBox);
             this.Controls.Add(this.RaceSelectGroupBox);
             this.Controls.Add(this.RacialBonusTextBox);
             this.Controls.Add(this.RacialBonusLabel);
@@ -215,9 +158,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Character Race";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RaceForm_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).EndInit();
             this.RaceSelectGroupBox.ResumeLayout(false);
             this.RaceSelectGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,11 +177,5 @@
         private System.Windows.Forms.RadioButton ElfRadioButton;
         private System.Windows.Forms.RadioButton DwarfRadioButton;
         private System.Windows.Forms.RadioButton HumanRadioButton;
-        private System.Windows.Forms.TextBox STRTextBox;
-        private System.Windows.Forms.TextBox INTTextBox;
-        private System.Windows.Forms.TextBox DEXTextBox;
-        private System.Windows.Forms.TextBox ENDTextBox;
-        private System.Windows.Forms.TextBox PERTextBox;
-        private System.Windows.Forms.TextBox CHATextBox;
     }
 }
