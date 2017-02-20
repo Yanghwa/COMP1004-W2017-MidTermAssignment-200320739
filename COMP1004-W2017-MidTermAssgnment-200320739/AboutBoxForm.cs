@@ -21,6 +21,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
 {
     partial class AboutBoxForm : Form
     {
+        //CONSTRUCTOR--------------------
         public AboutBoxForm()
         {
             InitializeComponent();

@@ -105,9 +105,9 @@
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(211, 30);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.ClickPrintToolStripMenuItem);
             // 
             // exitToolStripMenuItem
             // 
@@ -115,7 +115,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(189, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ClickExitToolStripMenuItem);
             // 
             // editToolStripMenuItem
             // 
@@ -133,7 +133,7 @@
             | System.Windows.Forms.Keys.F)));
             this.fontToolStripMenuItem.Size = new System.Drawing.Size(227, 30);
             this.fontToolStripMenuItem.Text = "&Font";
-            this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
+            this.fontToolStripMenuItem.Click += new System.EventHandler(this.ClickFontToolStripMenuItem);
             // 
             // helpToolStripMenuItem
             // 
@@ -150,7 +150,7 @@
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(205, 30);
             this.aboutToolStripMenuItem.Text = "&About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.ClickAboutToolStripMenuItem);
             // 
             // CharacterInformationGroupBox
             // 
@@ -314,10 +314,12 @@
             this.HeightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HeightTextBox.Location = new System.Drawing.Point(294, 6);
             this.HeightTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.HeightTextBox.MaxLength = 10;
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(70, 35);
             this.HeightTextBox.TabIndex = 23;
             this.HeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateOnlyNumber);
             // 
             // HeightLabel
             // 
@@ -351,6 +353,7 @@
             this.NameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NameTextBox.Location = new System.Drawing.Point(97, 6);
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NameTextBox.MaxLength = 50;
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(64, 35);
             this.NameTextBox.TabIndex = 23;
@@ -362,10 +365,12 @@
             this.AgeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgeTextBox.Location = new System.Drawing.Point(97, 55);
             this.AgeTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AgeTextBox.MaxLength = 3;
             this.AgeTextBox.Name = "AgeTextBox";
             this.AgeTextBox.Size = new System.Drawing.Size(64, 35);
             this.AgeTextBox.TabIndex = 23;
             this.AgeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AgeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateOnlyNumber);
             // 
             // WeightTextBox
             // 
@@ -373,10 +378,12 @@
             this.WeightTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WeightTextBox.Location = new System.Drawing.Point(294, 55);
             this.WeightTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.WeightTextBox.MaxLength = 10;
             this.WeightTextBox.Name = "WeightTextBox";
             this.WeightTextBox.Size = new System.Drawing.Size(70, 35);
             this.WeightTextBox.TabIndex = 23;
             this.WeightTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidateOnlyNumber);
             // 
             // AbilitiesGroupBox
             // 
@@ -602,7 +609,7 @@
             this.Name = "FinalForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Your Character Selections";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FinalForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormClosingFinalForm);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.CharacterInformationGroupBox.ResumeLayout(false);

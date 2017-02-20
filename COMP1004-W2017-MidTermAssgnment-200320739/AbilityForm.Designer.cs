@@ -185,7 +185,7 @@
             this.NextButton.TabIndex = 15;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.Click += new System.EventHandler(this.ClickNextButton);
             // 
             // RollButton
             // 
@@ -196,7 +196,7 @@
             this.RollButton.TabIndex = 14;
             this.RollButton.Text = "Roll";
             this.RollButton.UseVisualStyleBackColor = true;
-            this.RollButton.Click += new System.EventHandler(this.RollButton_Click);
+            this.RollButton.Click += new System.EventHandler(this.ClickRollButton);
             // 
             // AbilityForm
             // 
@@ -220,7 +220,7 @@
             this.Name = "AbilityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Roll Your Abilities";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AbilityForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ClosingAbilityForm);
             this.ResumeLayout(false);
             this.PerformLayout();
 

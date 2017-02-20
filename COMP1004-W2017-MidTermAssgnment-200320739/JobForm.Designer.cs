@@ -48,7 +48,7 @@
             this.NextButton.TabIndex = 3;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.Click += new System.EventHandler(this.ClickNextButton);
             // 
             // JobSelectGroupBox
             // 
@@ -75,7 +75,7 @@
             this.CultistRdioButton.Tag = "Cultist";
             this.CultistRdioButton.Text = "Cultist";
             this.CultistRdioButton.UseVisualStyleBackColor = true;
-            this.CultistRdioButton.CheckedChanged += new System.EventHandler(this.JobRadioButton_CheckedChanged);
+            this.CultistRdioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedJobRadioButton);
             // 
             // MagickerRadioButton
             // 
@@ -88,7 +88,7 @@
             this.MagickerRadioButton.Tag = "Magicker";
             this.MagickerRadioButton.Text = "Magicker";
             this.MagickerRadioButton.UseVisualStyleBackColor = true;
-            this.MagickerRadioButton.CheckedChanged += new System.EventHandler(this.JobRadioButton_CheckedChanged);
+            this.MagickerRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedJobRadioButton);
             // 
             // RogueRadioButton
             // 
@@ -101,7 +101,7 @@
             this.RogueRadioButton.Tag = "Rogue";
             this.RogueRadioButton.Text = "Rogue";
             this.RogueRadioButton.UseVisualStyleBackColor = true;
-            this.RogueRadioButton.CheckedChanged += new System.EventHandler(this.JobRadioButton_CheckedChanged);
+            this.RogueRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedJobRadioButton);
             // 
             // SoldierRadioButton
             // 
@@ -114,7 +114,7 @@
             this.SoldierRadioButton.Tag = "Soldier";
             this.SoldierRadioButton.Text = "Soldier";
             this.SoldierRadioButton.UseVisualStyleBackColor = true;
-            this.SoldierRadioButton.CheckedChanged += new System.EventHandler(this.JobRadioButton_CheckedChanged);
+            this.SoldierRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedJobRadioButton);
             // 
             // HealthPointLabel
             // 
@@ -148,7 +148,7 @@
             this.Name = "JobForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select the Character\'s Job";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.JobForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormClosingJobForm);
             this.JobSelectGroupBox.ResumeLayout(false);
             this.JobSelectGroupBox.PerformLayout();
             this.ResumeLayout(false);

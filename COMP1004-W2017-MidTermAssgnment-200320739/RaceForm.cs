@@ -22,51 +22,23 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
 {
     public partial class RaceForm : Form
     {
+        //PRIVATE INSTANCE VARIABLES
         private bool _checkRace = false;
         private int[] _abilityInteger;
-        public int[] AbilityInteger
-        {
-            get
-            {
-                return _abilityInteger;
-            }
-            set
-            {
-                _abilityInteger = value;
-            }
-        }
-        private int[] _raceAbilities;
-        public int[] RaceAbilities
-        {
-            get
-            {
-                return _raceAbilities;
-            }
-            set
-            {
-                _raceAbilities = value;
-            }
-        }
         private string _race;
-        public string Race
-        {
-            get
-            {
-                return _race;
-            }
-            set
-            {
-                _race = value;
-            }
-        }
+        //CONSTRUCTORS-------------------------------[]
         public RaceForm()
         {
             InitializeComponent();
-            
-
-
         }
-        private void RaceRadioButton_CheckedChanged(object sender, EventArgs e)
+        //Event Handlers------------------------------
+        /// <summary>
+        /// this method detects users click the radio button and shows what's different from other races
+        /// and stors abilities as integer so it can be resued from other forms
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckedChangedRaceRadioButton(object sender, EventArgs e)
         {
             _checkRace = true;
             RadioButton raceOption = sender as RadioButton;
@@ -75,7 +47,6 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             {
                 case "Human":
                     Random random = new Random();
-                    
                     for (int i = 0;i < 5; i++)
                     {
                         int randomNumber = random.Next(0, 6);
@@ -83,7 +54,6 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                     }
                     CharacterPictureBox.Image = global::COMP1004_W2017_MidTermAssgnment_200320739.Properties.Resources.M_Human1;
                     RacialBonusTextBox.Text = "+5 all of Abilities randomly";
-
                     Race = "Human";
                     break;
                 case "Dwarf":
@@ -91,7 +61,6 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                     _raceAbilities[0] = _abilityInteger[0] + 20;
                     _raceAbilities[4] = _abilityInteger[4] + 20;
                     _raceAbilities[5] = _abilityInteger[5] - 10;
-                    
                     RacialBonusTextBox.Text = "+20 STR&PER by 20, -10 CHA";
                     Race = "Dwarf";
                     break;
@@ -114,8 +83,13 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             CheckLimitOfAbilities(_raceAbilities);
 
         }
-
-        private void NextButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method sends the race infomation to Job when users click next button
+        /// shows the warning message if users didn't click any race before going to the next
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickNextButton(object sender, EventArgs e)
         {
             if(!_checkRace)
             {
@@ -128,7 +102,10 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             job.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// this method checks the number is correct, if less than 3, makes it 3, bigger than 50, makes it 50
+        /// </summary>
+        /// <param name="abilites"></param>
         private void CheckLimitOfAbilities(int[] abilites)
         {
             for (int i = 0; i < abilites.Length; i++)
@@ -143,8 +120,12 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                 }
             }
         }
-
-        private void RaceForm_FormClosing(object sender, FormClosingEventArgs e)
+        /// <summary>
+        /// this method shows the warning message when users want to close the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormClosingRaceForm(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -155,6 +136,50 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             else
             {
                 e.Cancel = true;
+            }
+        }
+        /// <summary>
+        /// this method is getter and setter for _abilityInteger
+        /// </summary>
+        public int[] AbilityInteger
+        {
+            get
+            {
+                return _abilityInteger;
+            }
+            set
+            {
+                _abilityInteger = value;
+            }
+        }
+        private int[] _raceAbilities;
+        /// <summary>
+        /// this method is getter and setter for _raceAbilities
+        /// </summary>
+        public int[] RaceAbilities
+        {
+            get
+            {
+                return _raceAbilities;
+            }
+            set
+            {
+                _raceAbilities = value;
+            }
+        }
+        
+        /// <summary>
+        /// this method is getter and setter for _race
+        /// </summary>
+        public string Race
+        {
+            get
+            {
+                return _race;
+            }
+            set
+            {
+                _race = value;
             }
         }
     }

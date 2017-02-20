@@ -50,7 +50,7 @@
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.Click += new System.EventHandler(this.ClickNextButton);
             // 
             // RacialBonusLabel
             // 
@@ -96,7 +96,7 @@
             this.HalflingRadioButton.Tag = "Halfling";
             this.HalflingRadioButton.Text = "Halfling";
             this.HalflingRadioButton.UseVisualStyleBackColor = true;
-            this.HalflingRadioButton.CheckedChanged += new System.EventHandler(this.RaceRadioButton_CheckedChanged);
+            this.HalflingRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedRaceRadioButton);
             // 
             // ElfRadioButton
             // 
@@ -108,7 +108,7 @@
             this.ElfRadioButton.Tag = "Elf";
             this.ElfRadioButton.Text = "Elf";
             this.ElfRadioButton.UseVisualStyleBackColor = true;
-            this.ElfRadioButton.CheckedChanged += new System.EventHandler(this.RaceRadioButton_CheckedChanged);
+            this.ElfRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedRaceRadioButton);
             // 
             // DwarfRadioButton
             // 
@@ -120,7 +120,7 @@
             this.DwarfRadioButton.Tag = "Dwarf";
             this.DwarfRadioButton.Text = "Dwarf";
             this.DwarfRadioButton.UseVisualStyleBackColor = true;
-            this.DwarfRadioButton.CheckedChanged += new System.EventHandler(this.RaceRadioButton_CheckedChanged);
+            this.DwarfRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedRaceRadioButton);
             // 
             // HumanRadioButton
             // 
@@ -132,7 +132,7 @@
             this.HumanRadioButton.Tag = "Human";
             this.HumanRadioButton.Text = "Human";
             this.HumanRadioButton.UseVisualStyleBackColor = true;
-            this.HumanRadioButton.CheckedChanged += new System.EventHandler(this.RaceRadioButton_CheckedChanged);
+            this.HumanRadioButton.CheckedChanged += new System.EventHandler(this.CheckedChangedRaceRadioButton);
             // 
             // CharacterPictureBox
             // 
@@ -157,7 +157,7 @@
             this.Name = "RaceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Character Race";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RaceForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormClosingRaceForm);
             this.RaceSelectGroupBox.ResumeLayout(false);
             this.RaceSelectGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CharacterPictureBox)).EndInit();

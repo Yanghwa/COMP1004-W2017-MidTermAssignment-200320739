@@ -22,42 +22,26 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
 {
     public partial class JobForm : Form
     {
+        //PRIVATE INSTANCE VARIABLES
         private bool _checkJob = false;
-        public RaceForm previousForm;
-        
         private string _job;
-        public string Job
-        {
-            get
-            {
-                return _job;
-            }
-            set
-            {
-                _job = value;
-            }
-        }
         private int _healthPoint;
-        public int HealthPoint
-        {
-            get
-            {
-                return _healthPoint;
-            }
-            set
-            {
-                _healthPoint = value;
-            }
-
-        }
+        
+        //Classes ------------------------
+        public RaceForm previousForm;
+        //CONSTRUCTORS----------------------------------
         public JobForm()
         {
             InitializeComponent();
-            
-            
         }
-
-        private void NextButton_Click(object sender, EventArgs e)
+        //Event Handlers---------------------------
+        /// <summary>
+        /// this method sends the job infomation to FinalForm when users click next button
+        /// shows the warning message if users didn't click any job before going to the next
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickNextButton(object sender, EventArgs e)
         {
             if (!_checkJob)
             {
@@ -72,8 +56,12 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             final.Show();
             
         }
-
-        private void JobRadioButton_CheckedChanged(object sender, EventArgs e)
+        /// <summary>
+        /// this method detects users click the radio button and shows healthpoints
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CheckedChangedJobRadioButton(object sender, EventArgs e)
         {
             _checkJob = true;
             RadioButton jobOption = sender as RadioButton;
@@ -99,8 +87,12 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             }
             HealthPointTextBox.Text = _healthPoint.ToString();
         }
-
-        private void JobForm_FormClosing(object sender, FormClosingEventArgs e)
+        /// <summary>
+        /// this method shows the warning message when users want to close the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormClosingJobForm(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -112,6 +104,37 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             {
                 e.Cancel = true;
             }
+        }
+        //functions-------------------------------
+        /// <summary>
+        /// this method is getter and setter for _job
+        /// </summary>
+        public string Job
+        {
+            get
+            {
+                return _job;
+            }
+            set
+            {
+                _job = value;
+            }
+        }
+        
+        /// <summary>
+        /// this method is getter and setter for _healthPoint
+        /// </summary>
+        public int HealthPoint
+        {
+            get
+            {
+                return _healthPoint;
+            }
+            set
+            {
+                _healthPoint = value;
+            }
+
         }
     }
 }

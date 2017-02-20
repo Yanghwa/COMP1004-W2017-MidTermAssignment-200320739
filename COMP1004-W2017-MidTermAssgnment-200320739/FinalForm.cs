@@ -22,18 +22,77 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
 {
     public partial class FinalForm : Form
     {
+        //Classes-----------------------
         public JobForm previousForm;
+        //CONSTRUCTOR---------------
         public FinalForm()
         {
             InitializeComponent();
         }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        //Event Handlers ---------------------------------
+        /// <summary>
+        /// this method makes exit button on the menu can exit the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickExitToolStripMenuItem(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void FinalForm_FormClosing(object sender, FormClosingEventArgs e)
+       
+        /// <summary>
+        /// this method shows font change box when users click the font on the menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickFontToolStripMenuItem(object sender, EventArgs e)
+        {
+            if (FinalFormFontDialog.ShowDialog() == DialogResult.OK)
+            {
+                NameLabel.Font = NameTextBox.Font = WeightLabel.Font = WeightTextBox.Font = AgeLabel.Font = AgeTextBox.Font = HealthPointsLabel.Font = HealthPointsTextBox.Font = HeightLabel.Font = HeightTextBox.Font = JobLabel.Font = JobTextBox.Font = RaceLabel.Font = RaceTextBox.Font = STRLabel.Font = STRTextBox.Font = DEXLabel.Font = DEXTextBox.Font = ENDLabel.Font = ENDTextBox.Font = INTLabel.Font = INTTextBox.Font = PERLabel.Font = PERTextBox.Font = CHALabel.Font = CHATextBox.Font = FinalFormFontDialog.Font;
+            }
+        }
+        /// <summary>
+        /// this method shows aboutbox inlcuing author information when users click about on the menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickAboutToolStripMenuItem(object sender, EventArgs e)
+        {
+            AboutBoxForm aboutForm = new AboutBoxForm();
+            aboutForm.ShowDialog();
+        }
+        
+        /// <summary>
+        /// this method shows all information using final form information, when users click the print on the menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickPrintToolStripMenuItem(object sender, EventArgs e)
+        {
+            if(CheckEmptyValue(NameTextBox.Text) && CheckEmptyValue(AgeTextBox.Text) && CheckEmptyValue(HeightTextBox.Text) && CheckEmptyValue(WeightTextBox.Text))
+            {
+                MessageBox.Show("Name: " + NameTextBox.Text + "\nAge: "
+                + AgeTextBox.Text + "\nHeight: " + HeightTextBox.Text
+                + "\nWeight: " + WeightTextBox.Text + "\nJob: "
+                + JobTextBox.Text + "\nRace: " + RaceTextBox.Text
+                + "\nHealth Points: " + HealthPointsTextBox.Text + "\nSTR: "
+                + STRTextBox.Text + "\nDEX: " + DEXTextBox.Text
+                + "\nEND: " + ENDTextBox.Text + "\nINT: " + INTTextBox.Text
+                + "\nPER: " + PERTextBox.Text + "\nCHA: " + CHATextBox.Text, "All Information");
+            }
+            else
+            {
+                MessageBox.Show("You're missing one of these values: Name, Age, Weight, Height","Missing somthing!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
+        }
+         /// <summary>
+        /// this method shows the warning message when users want to close the form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormClosingFinalForm(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -46,21 +105,23 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                 e.Cancel = true;
             }
         }
-
-        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method allows only number(no decimal) on the age, height, weight text box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ValidateOnlyNumber(object sender, KeyPressEventArgs e)
         {
-            if (FinalFormFontDialog.ShowDialog() == DialogResult.OK)
+            //only number and "." allowed
+            if (!(char.IsDigit(e.KeyChar) || e.KeyChar == (char)Keys.Back ))
             {
-                NameLabel.Font = NameTextBox.Font = WeightLabel.Font = WeightTextBox.Font = AgeLabel.Font = AgeTextBox.Font = HealthPointsLabel.Font = HealthPointsTextBox.Font = HeightLabel.Font = HeightTextBox.Font = JobLabel.Font = JobTextBox.Font = RaceLabel.Font = RaceTextBox.Font = STRLabel.Font = STRTextBox.Font = DEXLabel.Font = DEXTextBox.Font = ENDLabel.Font = ENDTextBox.Font = INTLabel.Font = INTTextBox.Font = PERLabel.Font = PERTextBox.Font = CHALabel.Font = CHATextBox.Font = FinalFormFontDialog.Font;
+                e.Handled = true;
             }
         }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AboutBoxForm aboutForm = new AboutBoxForm();
-            aboutForm.ShowDialog();
-        }
-
+        //functions---------------------------
+        /// <summary>
+        /// this method shows all information to the final form, using previous forms
+        /// </summary>
         public void InitializeFinalForm()
         {
             JobTextBox.Text = previousForm.Job;
@@ -73,20 +134,23 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             INTTextBox.Text = previousForm.previousForm.RaceAbilities[3].ToString();
             PERTextBox.Text = previousForm.previousForm.RaceAbilities[4].ToString();
             CHATextBox.Text = previousForm.previousForm.RaceAbilities[5].ToString();
-            
-
         }
 
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method check if string is empty
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        private bool CheckEmptyValue(string text)
         {
-            MessageBox.Show("Name: "+ NameTextBox.Text + "\nAge: " 
-                + AgeTextBox.Text + "\nHeight: " + HeightTextBox.Text 
-                + "\nWeight: " + WeightTextBox.Text + "\nJob: " 
-                + JobTextBox.Text + "\nRace: " + RaceTextBox.Text 
-                + "\nHealth Points: " + HealthPointsTextBox.Text + "\nSTR: " 
-                + STRTextBox.Text + "\nDEX: " + DEXTextBox.Text 
-                + "\nEND: " + ENDTextBox.Text + "\nINT: " + INTTextBox.Text
-                + "\nPER: " + PERTextBox.Text + "\nCHA: " + CHATextBox.Text, "All Information");
+            if(string.IsNullOrWhiteSpace(text))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

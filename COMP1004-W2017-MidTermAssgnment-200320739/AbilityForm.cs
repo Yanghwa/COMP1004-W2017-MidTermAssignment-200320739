@@ -25,17 +25,20 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
     {
         // Random Number object
         Random random = new Random();
+        //PRIVATE INSTANCE VARIABLES
         private List<TextBox> _abilities;
         private int[] _abilityInteger = new int[6];
         private bool _checkRoll = false;
+        
+        //CONSTRUCTOR-------------------------------
         public AbilityForm()
         {
             InitializeComponent();
 
             this._abilities = new List<TextBox>();
-            this._initializeAbilities();
+            this.InitializeAbilities();
         }
-
+        //Event Handelers---------------------------
         /// <summary>
         /// This method simulates the rolling of three 10-sided dice
         /// </summary>
@@ -51,32 +54,32 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             }
             return result;
         }
-        private void _initializeAbilities()
-        {
-            this._abilities.Add(STRTextBox);
-            this._abilities.Add(DEXTextBox);
-            this._abilities.Add(ENDTextBox);
-            this._abilities.Add(INTTextBox);
-            this._abilities.Add(PERTextBox);
-            this._abilities.Add(CHATextBox);
-        }
-        private void RollButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// This method executes Roll3D10 method, so set every abilities as a number between 3 and 30
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickRollButton(object sender, EventArgs e)
         {
             Debug.WriteLine(Roll3D10().ToString());
             for (int ability = 0; ability < this._abilities.Count; ability++)
             {
-                // roll 5d10 and assign the value to a temp variable
+                // roll 3d10 and assign the value to a temp variable
                 int currentRoll = this.Roll3D10();
 
-                // assign the current roll to the current ability
-                
+                // assign the current roll to the current ability and show in the textbox
                 this._abilityInteger[ability] = currentRoll;
                 this._abilities[ability].Text = currentRoll.ToString();
             }
             _checkRoll = true;
         }
-
-        private void NextButton_Click(object sender, EventArgs e)
+        /// <summary>
+        /// this method sends the abilities infomation to RaceFrom when users click next button
+        /// shows the warning message if users didn't click the roll button before going to the next
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickNextButton(object sender, EventArgs e)
         {
             if(!_checkRoll)
             {
@@ -89,8 +92,12 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             this.Hide();
             race.Show();
         }
-
-        private void AbilityForm_FormClosing(object sender, FormClosingEventArgs e)
+        /// <summary>
+        /// this method shows the warning message when users click x button to close
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClosingAbilityForm(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("If you want to close, push OK button.", "Warning",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
@@ -103,5 +110,19 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
                 e.Cancel = true;
             }
         }
+        //functions-----------------------------
+        /// <summary>
+        /// this method adds each ability textbox object to textbox array, to make possible to shows the abilities data in the textbox as string
+        /// </summary>
+        private void InitializeAbilities()
+        {
+            this._abilities.Add(STRTextBox);
+            this._abilities.Add(DEXTextBox);
+            this._abilities.Add(ENDTextBox);
+            this._abilities.Add(INTTextBox);
+            this._abilities.Add(PERTextBox);
+            this._abilities.Add(CHATextBox);
+        }
+        
     }
 }
