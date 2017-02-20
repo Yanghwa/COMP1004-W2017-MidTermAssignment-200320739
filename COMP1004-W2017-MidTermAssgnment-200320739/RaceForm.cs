@@ -47,10 +47,17 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
             {
                 case "Human":
                     Random random = new Random();
-                    for (int i = 0;i < 5; i++)
+                    for (int i = 0;i < 6; i++)
                     {
-                        int randomNumber = random.Next(0, 6);
-                        _raceAbilities[randomNumber] = _abilityInteger[randomNumber] + 1;
+                        int randomNumber = random.Next(0, 2);
+                        if(randomNumber == 0)
+                        {
+                            _raceAbilities[i] = _abilityInteger[i] + 5;
+                        }
+                        else
+                        {
+                            _raceAbilities[i] = _abilityInteger[i];
+                        }
                     }
                     CharacterPictureBox.Image = global::COMP1004_W2017_MidTermAssgnment_200320739.Properties.Resources.M_Human1;
                     RacialBonusTextBox.Text = "+5 all of Abilities randomly";
