@@ -31,7 +31,7 @@ namespace COMP1004_W2017_MidTermAssgnment_200320739
         }
         //Event Handlers ---------------------------------
         /// <summary>
-        /// this method makes exit button on the menu can exit the form
+        /// this method makes exit button on the menu and exit button on the bottom can exit the form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
